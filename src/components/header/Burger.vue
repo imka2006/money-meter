@@ -6,7 +6,7 @@
             <span class="burger-line third"></span>
         </div>
         <div :class="isActive ? 'burger-wrapper active' : 'burger-wrapper'">
-            <ul @click="isActive = !isActive, burgerClick" class="burger-list">
+            <ul @click="burgerClick()" class="burger-list">
                 <li class="burger-item"><router-link to="/spending">Траты</router-link></li>
                 <li class="burger-item"><router-link to="/earned">Заработанные</router-link></li>
                 <li class="burger-item"><router-link to="/rating">Участники</router-link></li>
