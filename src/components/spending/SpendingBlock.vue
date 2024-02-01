@@ -64,11 +64,5 @@ const getEditItems = () => {
 
 </script>
 
-<style lang="scss">
-.spending { 
-
-   
-
-
-}
+<style lang="scss"> 
 </style>

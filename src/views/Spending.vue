@@ -6,7 +6,7 @@
 
                 <SpendingHead />
 
-                <SpendingResult />
+                <SpendingResults />
 
                 <SpendingAdd />
 
@@ -31,10 +31,10 @@
 import { onMounted, ref } from 'vue';
 import { useStore } from 'vuex';
 import SpendingHead from "../components/spending/SpendingHead.vue";
-import SpendingResult from "../components/spending/spendingresult.vue";
 import SpendingBlock from '../components/spending/SpendingBlock.vue';
 import SpendingAdd from '../components/spending/SpendingAdd.vue';
 import SpendingDelete from '../components/spending/SpendingDelete.vue';
+import SpendingResults from "../components/spending/SpendingResults.vue";
 
 const store = useStore();
 

@@ -11,7 +11,3 @@ const totalQuality = () => {
     return store.state.spendingListSec.reduce((sun, moon) => sun + moon.money, 0);
 }
 </script>
-
-<style>
-
-</style>
