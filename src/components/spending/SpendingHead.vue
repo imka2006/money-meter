@@ -22,4 +22,11 @@ onMounted(() => {
 })
 </script>
 
-<style></style>
+<style lang="scss">
+@media screen and (max-width:925px) {
+    .spending-list {
+        flex-wrap: wrap;
+        max-width: 450px;
+    }
+}
+</style>

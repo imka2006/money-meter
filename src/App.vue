@@ -29,6 +29,8 @@ body {
   font-family: sans-serif;
   background: #1c1c1c;
   color: #fff; 
+  padding-bottom: 30px;
+  
 }
 
 h1,

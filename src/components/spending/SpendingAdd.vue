@@ -44,17 +44,15 @@ const money = ref('')
 
 
 
-const addSpending = async () => {
+const addSpending = () => {
   try {
     const newData = { 
         name:name.value,
         money:money.value,
         date:store.state.today,
         subname:description.value
-    };
-    console.log(newData);
-    const result = await store.dispatch('setAddSpending', newData);
-    console.log('Данные успешно добавлены в MockAPI:', result);
+    }; 
+    store.dispatch('setAddSpending', newData); 
   } catch (error) {
     console.error('Ошибка при добавлении данных в MockAPI:', error);
   } 

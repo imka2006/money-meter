@@ -1,18 +1,19 @@
 <template>
     <div :class="isEdit ? 'spending-block' : 'spending-block editing'">
-        <div v-if="isEdit" class="spending-name">{{ item.name[0].toUpperCase() + item.name.substring(1) }}
-            <template v-if="item.subname && isEdit">(<span>{{ item.subname[0].toUpperCase() + item.subname.substring(1) }}
-                </span>)</template>
-        </div>
+        <h4 v-if="isEdit" class="spending-name">{{ item.name[0].toUpperCase() + item.name.substring(1) }}
+            <template v-if="item.subname && isEdit">
+                <span>({{ item.subname[0].toUpperCase() + item.subname.substring(1) }})</span></template>
+        </h4>
         <template v-else>
             <input type="text" placeholder="Название" class="spending-input" v-model="inputName">
             <input type="text" placeholder="Описание" class="spending-input" v-model="inputSubname">
         </template>
-        <div v-if="isEdit" class="spending-money">{{ item.money }} СОМ</div>
-        <input v-else type="number" placeholder="деньги(СОМ)" class="spending-input" v-model="inputMoney">
-        <div v-if="isEdit" class="spending-date">{{ item.date }}</div>
-        <input v-else type="text" placeholder="Дата" class="spending-input" v-model="inputDate">
-
+        <div class="spending-mini-wrapper">
+            <div v-if="isEdit" class="spending-money">{{ item.money }} СОМ</div>
+            <input v-else type="number" placeholder="деньги(СОМ)" class="spending-input" v-model="inputMoney">
+            <div v-if="isEdit" class="spending-date">{{ item.date }}</div>
+            <input v-else type="text" placeholder="Дата" class="spending-input" v-model="inputDate">
+        </div>
         <div class="spending-edit-wrapper" @click="isEdit = !isEdit">
             <Edit v-if="isEdit" class="spending-edit" />
             <button @click="getEditItems(item)" v-else class="spending-btn another" style="margin: 0;">Готово</button>
@@ -56,11 +57,18 @@ const getEditItems = () => {
         money: inputMoney.value,
         date: inputDate.value,
     }
- 
+
     store.dispatch("updeteItem", { idItem, newData })
 }
 
 
 </script>
 
-<style></style>
+<style lang="scss">
+.spending { 
+
+   
+
+
+}
+</style>
